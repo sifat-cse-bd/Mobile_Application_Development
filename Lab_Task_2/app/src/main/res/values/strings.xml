@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LoginProfileApp</string>
+    <string name="app_logo_description">App Logo</string>
+    <string name="welcome_text">Welcome Back!</string>
+    <string name="hint_username">Enter Username</string>
+    <string name="hint_password">Enter Password</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="btn_login">Login</string>
+    <string name="user_name">Admin User</string>
+    <string name="user_email">admin@example.com</string>
+    <string name="user_bio">Android Developer | UI/UX Enthusiast</string>
+    <string name="btn_logout">Logout</string>
+</resources>
