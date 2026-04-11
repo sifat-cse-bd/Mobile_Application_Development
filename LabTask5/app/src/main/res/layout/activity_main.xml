@@ -12,17 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:queryHint="Search contacts..."
         android:background="@drawable/search_bg"
         android:iconifiedByDefault="false"
-        />
+        android:queryHint="Search contacts..."
+        android:backgroundTint="#FFFFFF" />
 
     <ListView
         android:id="@+id/lvContact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:layout_below="@+id/svContact" />
+        android:layout_below="@+id/svContact"
+        android:dividerHeight="0dp" />
     <TextView
         android:id="@+id/tvEmpty"
         android:layout_width="wrap_content"
