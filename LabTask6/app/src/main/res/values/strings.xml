@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">NewsReaderApp</string>
+    <string name="share_content_description">Share</string>
+    <string name="long_body_text" />
+    <string name="artemis_title">Artemis II: A Historic Leap Toward the Lunar Frontier</string>
+
+    <string name="artemis_intro">
+        The successful launch of the Artemis II mission represents a definitive turning point in modern
+        space exploration, signaling humanity\'s formal return to deep space. Following the groundwork
+        laid by the uncrewed Artemis I, this mission carries the immense responsibility of transporting
+        the first human crew to the lunar vicinity in over fifty years. As the Space Launch System (SLS)
+        rocket—the most powerful launch vehicle ever built—soared from the Kennedy Space Center,
+        it carried with it the aspirations of a global community. This mission is not merely a flight;
+        it is a rigorous validation of the Orion spacecraft’s ability to sustain human life in the harsh
+        environment beyond Earth\'s orbit. By venturing thousands of miles past the Moon, Artemis II
+        serves as the ultimate proof of concept for the Artemis program, bridging the gap between
+        theoretical engineering and the practical reality of multi-planetary existence.
+    </string>
+
+    <string name="artemis_key_points">
+        The mission is defined by its historic crew and its complex flight trajectory. The four-member
+        team consists of Commander Reid Wiseman, Pilot Victor Glover, and Mission Specialists Christina
+        Koch and Jeremy Hansen. This crew is notably diverse, including the first woman, the first
+        person of color, and the first non-American to embark on a lunar mission. Over the course of
+        approximately ten days, the Orion capsule will perform a \"hybrid free-return trajectory.\"
+        This path uses the Moon’s gravity to naturally pull the spacecraft back toward Earth, ensuring
+        safety even in the event of engine failure. Key technical objectives include testing the
+        Environmental Control and Life Support Systems (ECLSS), evaluating the optical communication
+        arrays for high-bandwidth data transfer, and monitoring the spacecraft’s performance during
+        the high-speed reentry into Earth’s atmosphere, where it must withstand temperatures reaching
+        nearly 5,000 degrees Fahrenheit.
+    </string>
+
+    <string name="artemis_analysis">
+        From a strategic and technical perspective, Artemis II is the critical \"stress test\" required
+        before NASA can attempt a lunar landing with Artemis III. While Artemis I proved that the SLS
+        and Orion could physically survive the journey, Artemis II analyzes how the hardware interacts
+        with human occupants under extreme pressure. This mission effectively shifts NASA’s focus from
+        low-Earth orbit operations, like those of the International Space Station, to the \"Proving Ground\"
+        of deep space. Furthermore, the geopolitical implications are significant; the success of Artemis II
+        solidifies the United States\' leadership in the new space race and strengthens international
+        partnerships, particularly with the Canadian Space Agency. However, the analysis also reveals
+        the narrow margins for error. Any discrepancy in the heat shield’s performance or the life-support
+        sensors will require immediate iterations, as these systems are the only barriers between the
+        crew and the vacuum of space.
+    </string>
+
+    <string name="artemis_conclusion">
+        In conclusion, the successful launch of Artemis II is a testament to human ingenuity and the
+        relentless pursuit of discovery. It marks the end of an era of absence from the lunar neighborhood
+        and the beginning of a sustainable presence in deep space. The data gathered during these ten
+        days will be the foundation upon which future moonbases and eventually Mars colonies are built.
+        Beyond the scientific and technical milestones, the mission serves as a powerful inspiration for
+        the \"Artemis Generation\"—students and dreamers worldwide who see the Moon not as a distant light,
+        but as a reachable destination. As the Orion spacecraft travels further than any human-rated vessel
+        has gone before, it carries the message that our boundaries are only limited by our courage.
+        The journey of Artemis II is a bold declaration that humanity is no longer just visiting space;
+        we are learning how to live there.
+    </string>
+</resources>
