@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CotactBookApp</string>
+    <string name="emptyMsg">No contact found</string>
+</resources>
