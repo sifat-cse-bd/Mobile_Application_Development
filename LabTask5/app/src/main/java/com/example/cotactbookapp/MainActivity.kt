@@ -1,5 +1,6 @@
 package com.example.cotactbookapp
 
+import android.graphics.Color
 import android.os.Bundle
 import android.text.InputType
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.LinearLayout
 import android.widget.ListView
 import android.widget.SearchView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -38,6 +40,8 @@ class MainActivity : AppCompatActivity() {
 
         //Initialization of fields
         svContact = findViewById<SearchView>(R.id.svContact)
+        val searchEditText = svContact.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
+        searchEditText?.setHintTextColor(Color.parseColor("#ECF0F1"))
         lvContact = findViewById<ListView>(R.id.lvContact)
         fabAdd = findViewById<FloatingActionButton>(R.id.fabAdd)
         tvEmpty = findViewById<TextView>(R.id.tvEmpty)
@@ -49,9 +53,37 @@ class MainActivity : AppCompatActivity() {
         adapter = ContactAdapter(this, R.layout.item_contact, displayList)
         lvContact.adapter = adapter
 
+        filterContacts()
+        checkEmptyStatus()
+
         fabAdd.setOnClickListener {
             showContactDialog()
         }
+
+        //Toast for each contact
+        lvContact.setOnItemClickListener { _, _, position, _ ->
+
+            val contact = displayList[position]
+                Toast.makeText(this,"Name: $contact.name \nPhone: $contact.phone \nEmail: $contact.email", Toast.LENGTH_SHORT).show()
+        }
+
+        //Delete contact long press item
+        lvContact.setOnItemLongClickListener { _, _, position, _ ->
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Delete contact")
+            builder.setMessage("Are you sure you want to delete this contact?")
+            builder.setPositiveButton("Yes") { _, _ ->
+                val contact = displayList[position]
+                contactList.remove(contact)
+                filterContacts()
+                checkEmptyStatus()
+                Toast.makeText(this, "Contact deleted", Toast.LENGTH_SHORT).show()
+            }
+            builder.setNegativeButton("Cancel", null)
+            builder.show()
+            true
+        }
+
 
         svContact.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean = false
