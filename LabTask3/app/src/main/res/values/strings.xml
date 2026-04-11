@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FitnessTrackerApp</string>
+    <string name="header_title">My Fitness Dashboard</string>
+</resources>

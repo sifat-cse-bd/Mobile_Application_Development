@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Header Section -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="My Fitness Dashboard"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14 Mar 2026"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Guidelines for Stats Grid -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <!-- Stats CardViews -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSteps"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical50"
+        app:layout_constraintTop_toBottomOf="@id/tvDate"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal50"
+        app:layout_constraintDimensionRatio="1:1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStepsIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚶"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tvStepsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStepsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steps" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCalories"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal50"
+        app:layout_constraintDimensionRatio="1:1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCaloriesIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔥"
+                android:textSize="28sp"/>
+            <TextView
+                android:id="@+id/tvCaloriesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvCaloriesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calories"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardWater"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical50"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal50"
+        app:layout_constraintBottom_toTopOf="@id/tvProgressLabel"
+        app:layout_constraintDimensionRatio="1:1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvWaterIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💧"
+                android:textSize="28sp"/>
+            <TextView
+                android:id="@+id/tvWaterCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0L"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvWaterLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardWorkout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal50"
+        app:layout_constraintBottom_toTopOf="@id/tvProgressLabel"
+        app:layout_constraintDimensionRatio="1:1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvWorkoutIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏱️"
+                android:textSize="28sp"/>
+            <TextView
+                android:id="@+id/tvWorkoutCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0h"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvWorkoutLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Workout"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Progress Section -->
+    <TextView
+        android:id="@+id/tvProgressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today's Goal Progress"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/cardWater"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProgressLabel"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvProgressPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/progressBar"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar"/>
+
+    <!-- Motivational Quote -->
+    <TextView
+        android:id="@+id/tvQuote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Keep pushing, you are doing great!"
+        android:textSize="14sp"
+        android:textColor="#444"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/btnUpdateStats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Update Stats Button -->
+    <Button
+        android:id="@+id/btnUpdateStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Stats"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
