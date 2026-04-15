@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Main content column -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- App bar -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Photo Gallery"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/textPrimary"
+            android:background="@color/surface"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="14dp"
+            android:elevation="4dp"/>
+
+        <!-- Selection Toolbar (initially GONE) -->
+        <LinearLayout
+            android:id="@+id/selectionToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/accent"
+            android:paddingHorizontal="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/selectionCountText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0 selected"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/shareBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Share"
+                android:textColor="@color/accent"
+                android:backgroundTint="@android:color/white"
+                android:layout_marginEnd="8dp"
+                style="@style/Widget.MaterialComponents.Button"/>
+
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Delete"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/deleteRed"
+                style="@style/Widget.MaterialComponents.Button"/>
+
+        </LinearLayout>
+
+        <!-- Category Tab Bar -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:background="@color/surface"
+            android:paddingVertical="8dp"
+            android:elevation="2dp">
+
+            <LinearLayout
+                android:id="@+id/tabContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp"/>
+
+        </HorizontalScrollView>
+
+        <!-- Grid -->
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:numColumns="2"
+            android:horizontalSpacing="4dp"
+            android:verticalSpacing="4dp"
+            android:padding="4dp"
+            android:stretchMode="columnWidth"
+            android:background="@color/background"/>
+
+    </LinearLayout>
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:contentDescription="Add photo"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/accent"
+        app:tint="@android:color/white"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:dividerPadding="10dp"-->
+<!--    android:orientation="vertical"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    &lt;!&ndash;    Filter Tab Layout   &ndash;&gt;-->
+
+
+<!--    <HorizontalScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:overScrollMode="ifContentScrolls"-->
+<!--        android:scrollbars="none">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:gravity="bottom"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="16dp">-->
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/btnAll"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="12dp"-->
+<!--                android:text="@string/btn_all"-->
+<!--                android:textColor="#0D0101"-->
+<!--                app:backgroundTint="#ffffff"-->
+<!--                app:cornerRadius="1dp"-->
+<!--                app:strokeColor="@color/cardview_dark_background"-->
+<!--                app:strokeWidth="2dp" />-->
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/btnNature"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="12dp"-->
+<!--                android:text="@string/btn_nature"-->
+<!--                android:textColor="#0D0101"-->
+<!--                app:backgroundTint="#B5B5AF"-->
+<!--                app:cornerRadius="0dp" />-->
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/btnCity"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="12dp"-->
+<!--                android:text="@string/btn_city"-->
+<!--                android:textColor="#0D0101"-->
+<!--                app:backgroundTint="#B5B5AF"-->
+<!--                app:cornerRadius="0dp" />-->
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/btnAnimals"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="12dp"-->
+<!--                android:text="@string/btn_animals"-->
+<!--                android:textColor="#0D0101"-->
+<!--                app:backgroundTint="#B5B5AF"-->
+<!--                app:cornerRadius="0dp" />-->
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/btnFood"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="12dp"-->
+<!--                android:text="@string/btn_food"-->
+<!--                android:textColor="#0D0101"-->
+<!--                app:backgroundTint="#B5B5AF"-->
+<!--                app:cornerRadius="0dp" />-->
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/btnTravel"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="12dp"-->
+<!--                android:text="@string/btn_travel"-->
+<!--                android:textColor="#0D0101"-->
+<!--                app:backgroundTint="#B5B5AF"-->
+<!--                app:cornerRadius="0dp" />-->
+
+
+<!--        </LinearLayout>-->
+<!--    </HorizontalScrollView>-->
+
+
+<!--    &lt;!&ndash;  Grid View Layout  &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:padding="15dp">-->
+
+<!--        <GridView-->
+<!--            android:id="@+id/gvPhotos"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:clickable="true"-->
+<!--            android:numColumns="4" />-->
+<!--    </LinearLayout>-->
+
+
+<!--</LinearLayout>-->
