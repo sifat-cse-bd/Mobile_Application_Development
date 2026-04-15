@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PhotoGalleryApp</string>
+    <string name="btn_all">All</string>
+    <string name="btn_nature">Nature</string>
+    <string name="btn_city">City</string>
+    <string name="btn_animals">Animals</string>
+    <string name="btn_food">Food</string>
+    <string name="btn_travel">Travel</string>
+
+</resources>
