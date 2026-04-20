@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.GridView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -17,6 +18,7 @@ class SeatActivity : AppCompatActivity() {
         setContentView(R.layout.activity_seat)
 
         val event = intent.getSerializableExtra("event") as Event
+        val txtSummary = findViewById<TextView>(R.id.txtSummary)
 
         val grid = findViewById<GridView>(R.id.gridView)
 
@@ -33,6 +35,7 @@ class SeatActivity : AppCompatActivity() {
                 it.status = 0
                 selected--
             }
+            txtSummary.text = "$selected seats selected | Total: $${selected * event.price}"
         }
 
         grid.adapter = adapter

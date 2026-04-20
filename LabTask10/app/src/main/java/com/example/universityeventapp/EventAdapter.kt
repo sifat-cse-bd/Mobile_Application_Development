@@ -3,6 +3,7 @@ package com.example.universityeventapp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -24,7 +25,11 @@ class EventAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val event = list[position]
 
+        holder.view.findViewById<ImageView>(R.id.img).setImageResource(event.imageRes)
         holder.view.findViewById<TextView>(R.id.title).text = event.title
+        holder.view.findViewById<TextView>(R.id.date).text = event.date
+        holder.view.findViewById<TextView>(R.id.venue).text = event.venue
+
         holder.view.setOnClickListener { onClick(event) }
     }
 

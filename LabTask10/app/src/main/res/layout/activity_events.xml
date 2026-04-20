@@ -3,7 +3,10 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -14,20 +17,59 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:scrollbars="none">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="4dp">
 
-            <Button android:text="All" />
+            <Button
+                android:id="@+id/btnAll"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/filter_chip_selector"
+                android:text="All"
+                android:textAllCaps="false"
+                android:textColor="#333" />
 
-            <Button android:text="Tech" />
+            <Button
+                android:id="@+id/btnTech"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/filter_chip_selector"
+                android:text="Tech"
+                android:textAllCaps="false"
+                android:textColor="#333" />
 
-            <Button android:text="Sports" />
+            <Button
+                android:id="@+id/btnSports"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/filter_chip_selector"
+                android:text="Sports"
+                android:textAllCaps="false"
+                android:textColor="#333" />
 
-            <Button android:text="Cultural" />
+            <Button
+                android:id="@+id/btnCultural"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/filter_chip_selector"
+                android:text="Cultural"
+                android:textAllCaps="false"
+                android:textColor="#333" />
 
         </LinearLayout>
     </HorizontalScrollView>

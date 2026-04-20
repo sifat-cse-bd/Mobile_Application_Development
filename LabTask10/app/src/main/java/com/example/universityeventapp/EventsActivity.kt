@@ -2,6 +2,7 @@ package com.example.universityeventapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,5 +25,25 @@ class EventsActivity : AppCompatActivity() {
 
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = adapter
+
+        // Filtering logic
+        findViewById<Button>(R.id.btnAll).setOnClickListener {
+            adapter.filter(EventData.events)
+        }
+
+        findViewById<Button>(R.id.btnTech).setOnClickListener {
+            val filtered = EventData.events.filter { it.category == "Tech" }
+            adapter.filter(filtered)
+        }
+
+        findViewById<Button>(R.id.btnSports).setOnClickListener {
+            val filtered = EventData.events.filter { it.category == "Sports" }
+            adapter.filter(filtered)
+        }
+
+        findViewById<Button>(R.id.btnCultural).setOnClickListener {
+            val filtered = EventData.events.filter { it.category == "Cultural" }
+            adapter.filter(filtered)
+        }
     }
 }
