@@ -7,8 +7,5 @@ data class Product(
     val rating: Float,
     val category: String,
     val imageRes: Int,
-    val inCart: Boolean = false
+    var inCart: Boolean = false
 )
-{
-
-}
